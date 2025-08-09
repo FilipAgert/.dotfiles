@@ -49,4 +49,4 @@ case "$lang" in
     ;;
 esac
 
-echo ".vscode/settings.json set up for $lang."
+echo "Project structure set up for $lang."

@@ -1,0 +1,15 @@
+{
+  "fortran.linter.includePaths": [
+      "${workspaceFolder}/src/",
+    "${workspaceFolder}/mod/",  
+    "${workspaceFolder}/build/"
+  ],
+  "fortran.fortls.path": "${workspaceFolder}/.venv/bin/fortls",
+  "editor.rulers": [
+      {
+          "column": 80,
+          "color": "#EEEEEE"
+      }       
+      , 132],
+  "fortran-ls.mod_output": "${workspaceFolder}/build"
+}

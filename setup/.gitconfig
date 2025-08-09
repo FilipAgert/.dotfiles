@@ -1,0 +1,8 @@
+[include]
+	path = ~/.gitconfig_local
+[core]
+	editor = nvim
+
+
+[color]
+	ui = auto

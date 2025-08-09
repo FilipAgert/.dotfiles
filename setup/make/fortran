@@ -1,0 +1,43 @@
+# Directories
+DSRC    := src
+DOBJ    := build/obj
+DMOD    := build/mod
+DEXE    := app
+DDATA   := data
+EXEN    := main
+
+FC      := gfortran
+FFLAGS  := -J$(DMOD) -O2 -Wall -ffree-line-length-none -fdefault-real-8
+# Sources
+SRCS := $(DSRC)/
+MAIN_SRC := $(DSRC)/
+
+# Remove "src/" before mapping to $(DOBJ)
+OBJS := $(patsubst $(DSRC)/%.f90,$(DOBJ)/%.o,$(SRCS))
+MAIN_OBJ := $(patsubst $(DSRC)/%.f90,$(DOBJ)/%.o,$(MAIN_SRC))
+OBJECTS  := $(OBJS) 
+
+# Generic compile rule
+$(DOBJ)/%.o: $(DSRC)/%.f90 | $(DOBJ) $(DMOD)
+	@mkdir -p $(dir $@)
+	$(FC) $(FFLAGS) -c $< -o $@
+
+# Ensure required directories exist
+$(DOBJ) $(DEXE) $(DMOD) $(DDATA):
+	mkdir -p $@
+
+# Build final executable
+$(DEXE)/$(EXEN): $(MAIN_OBJ) $(OBJECTS) | $(DEXE)
+	$(FC) $(FFLAGS) -o $@ $(MAIN_OBJ) $(OBJECTS) $(LIBS)
+
+# Aliases
+all: $(DEXE)/$(EXEN)
+main: $(DEXE)/$(EXEN)
+
+run: $(DEXE)/$(EXEN)
+	$(DEXE)/$(EXEN)
+
+clean:
+	rm -rf $(DOBJ) $(DEXE) $(DMOD) *.dat
+
+.PHONY: all clean run main

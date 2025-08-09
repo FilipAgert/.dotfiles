@@ -22,7 +22,7 @@ select lang in python cpp fortran; do
   fi
 done
 
-mkdir -p .vscode
+mkdir -p .vscode src data
 
 case "$lang" in
   python)
@@ -39,7 +39,8 @@ case "$lang" in
     create_venv
     pip3 install fortls
     cp ~/.dotfiles/setup/vscode/fortran_settings.json .vscode/settings.json
-    
+    cp ~/.dotfiles/setup/make/fortran makefile
+    mkdir -p build app build/obj build/mod   
     ;;
 
   *)

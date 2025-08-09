@@ -6,7 +6,14 @@ set noswapfile
 set hlsearch
 set ignorecase
 set incsearch
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab "expand tabs into spaces
+nnoremap <silent> <C-l> :nohl<CR> "Redraws screen and clears highlighted search
 
+map <F2> :bprev<CR> "previous bugger
+map <F3> :bnext<CR>
 " Disable arrow keys in normal mode
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>

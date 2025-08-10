@@ -1,5 +1,5 @@
 inoremap jk <Esc> "remap Esc to jk
-let mapleader = "'"
+
 syntax on
 set number
 set noswapfile
@@ -10,8 +10,14 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab "expand tabs into spaces
-nnoremap <silent> <C-l> :nohl<CR> "Redraws screen and clears highlighted search
+set showcmd " show when you press leader key.
+" Key maps and remaps:
+nnoremap <space> <Nop>
+let mapleader = " " "leader button
 
+nnoremap <silent> <C-l> :nohl<CR> "Redraws screen and clears highlighted search
+nnoremap <Leader>o o<Esc>0"_D
+nnoremap <Leader>O O<Esc>0"_D
 map <F2> :bprev<CR> "previous bugger
 map <F3> :bnext<CR>
 " Disable arrow keys in normal mode

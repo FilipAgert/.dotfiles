@@ -1,6 +1,11 @@
 inoremap jk <Esc> "remap Esc to jk
 
-syntax on
+let fortran_free_source=1
+let fortran_more_price=1
+let fortran_do_enddo=1
+filetype plugin indent on
+syntax on"auto set stuff for programming
+
 set number
 set noswapfile
 set hlsearch

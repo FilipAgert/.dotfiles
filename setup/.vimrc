@@ -18,8 +18,6 @@ let mapleader = " " "leader button
 nnoremap <silent> <C-l> :nohl<CR> "Redraws screen and clears highlighted search
 nnoremap <Leader>o o<Esc>0"_D
 nnoremap <Leader>O O<Esc>0"_D
-map <F2> :bprev<CR> "previous bugger
-map <F3> :bnext<CR>
 
 " Shift tab to the left normal mode
 nnoremap <S-Tab> <<

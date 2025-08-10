@@ -131,3 +131,8 @@ alias gc='git commit -m'
 alias ga='git add'
 alias gr='git restore'
 alias gd='git diff'
+
+
+
+# navigation aliases
+alias cdp='cd ~/projects'

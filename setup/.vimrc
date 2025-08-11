@@ -1,5 +1,13 @@
 inoremap jk <Esc> "remap Esc to jk
 
+
+"   Colorscheme
+colorscheme slate " dark grey
+
+
+
+
+
 let fortran_free_source=1
 let fortran_more_price=1
 let fortran_do_enddo=1

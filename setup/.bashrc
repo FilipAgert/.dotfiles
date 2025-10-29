@@ -14,7 +14,9 @@ bind '"\e[C": ""'
 bind '"\e[A": ""'
 bind '"\e[D": ""'
 
-
+# force english language
+export GDM_LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options

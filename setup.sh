@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 set -euo pipefail
 
@@ -44,3 +43,9 @@ ln -s "$file" "$target"
 echo "Creating symlink for $file"
 source ~/.bashrc
 echo "Dotfiles setup complete."
+
+
+# Setup lazy neovim
+CONFIG_DIR="$HOME/.config/nvim/lua/config"
+mkdir -p "$CONFIG_DIR"
+cp "$DOTFILES_DIR/lazy.lua" "$CONFIG_DIR/"

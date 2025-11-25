@@ -47,6 +47,8 @@ lua << EOF
     })
     vim.lsp.enable('fortls')
 EOF
+lua require("config.lazy")
+set clipboard+=unnamedplus
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc

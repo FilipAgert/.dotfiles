@@ -56,5 +56,5 @@ vnoremap <Down> <Nop>
 vnoremap <Left> <Nop>
 vnoremap <Right> <Nop>
 
-*Clipboard default from yank
-set clipboard=unnamedplus
+" Clipboard default from yank
+set clipboard+=unnamedplus

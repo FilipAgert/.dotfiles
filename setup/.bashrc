@@ -140,3 +140,4 @@ alias gd='git diff'
 alias cdp='cd ~/projects'
 # Set nvim path
 export PATH="$HOME/nvim-linux64/nvim-app/usr/bin:$PATH"
+export PATH="$HOME/local/bin:$PATH"

@@ -1,0 +1,9 @@
+GDB: Debugger for C++, C, Fortran.
+
+Nvim: Install via github page for latest release. apt-get install neovim gives and old version.
+
+fortls: Need to install lspconfig by download into ~/.config/nvim/pack
+https://github.com/neovim/nvim-lspconfig
+ 
+
+

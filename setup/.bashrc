@@ -1,7 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-set -o vi
+# set -o vi
 
 # If not running interactively, don't do anything
 case $- in
@@ -9,10 +9,10 @@ case $- in
       *) return;;
 esac
 alias vim='nvim'
-bind '"\e[B": ""'
-bind '"\e[C": ""'
-bind '"\e[A": ""'
-bind '"\e[D": ""'
+# bind '"\e[B": ""'
+# bind '"\e[C": ""'
+# bind '"\e[A": ""'
+# bind '"\e[D": ""'
 
 # force english language
 export GDM_LANG=en_US.UTF-8
